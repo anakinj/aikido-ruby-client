@@ -6,3 +6,4 @@ require 'aikido-ruby-client'
 client = Aikido::Client.new
 
 puts client.issues
+puts client.code_repositories.to_a

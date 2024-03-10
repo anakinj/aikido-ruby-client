@@ -1,0 +1,152 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://app.aikido.dev/api/oauth/token
+    body:
+      encoding: UTF-8
+      string: '{"grant_type":"client_credentials"}'
+    headers:
+      Content-Type:
+      - application/json
+      Accept:
+      - application/json
+      User-Agent:
+      - Aikido Ruby Client 0.0.1
+      Authorization:
+      - "<AUTHORIZATION_HEADER>"
+      Accept-Encoding:
+      - gzip, deflate
+      Content-Length:
+      - '35'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 10 Mar 2024 19:16:53 GMT
+      Content-Type:
+      - application/json
+      Server:
+      - Apache
+      Content-Security-Policy:
+      - 'default-src ''self'' https://cdn.aikido.dev; script-src ''self'' https://widget.intercom.io
+        https://js.intercomcdn.com ''sha256-dAMs3/Yp2SSUrhzjwbwLmPPB0soj/thHemUrM4u00O8=''
+        https://cdn.aikido.dev https://js-eu1.hs-scripts.com https://js-eu1.hs-banner.com
+        https://js-eu1.hubspot.com https://js-eu1.hs-analytics.net ''sha256-1e5RR2OpHhuX2h0Bat19DsNTmqbo4M3T1pqfeTXCHaA='';
+        img-src ''self'' data: blob: https://site-admin-avatar-cdn.prod.public.atl-paas.net/avatars/
+        https://api.atlassian.com/ex/jira/ https://static.intercomassets.com https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/
+        https://public.linear.app/3e49ffe7-6d8a-4461-87e6-51db22880264/b56a87f8-51d0-4b41-804e-9df63b3cafe7
+        https://*.intercomcdn.com https://static.intercomassets.com https://js.intercomcdn.com
+        https://avatars.githubusercontent.com https://cdn.aikido.dev https://secure.gravatar.com
+        https://track-eu1.hubspot.com/; media-src https://media.securecodewarrior.com/
+        https://video-bundler.lambdatest.com/; style-src ''unsafe-inline'' ''self''
+        https://cdn.aikido.dev; font-src ''self'' https://*.intercomcdn.com https://cdn.aikido.dev;
+        frame-src ''self'' https://vaultjs.apideck.com https://www.aikido.dev/signup-succesful;
+        connect-src ''self'' https://o1405212.ingest.sentry.io/ https://*.intercom.io
+        wss://*.intercom.io https://uploads.intercomcdn.com https://sockjs-eu.pusher.com
+        wss://ws-eu.pusher.com https://cdn.aikido.dev https://journy.aikido.dev https://cta-eu1.hubspot.com
+        https://product.aikido.dev; prefetch-src ''self'' https://cdn.aikido.dev/;
+        object-src ''none''; frame-ancestors ''none''; form-action ''none''; base-uri
+        ''self'';'
+      X-Ua-Compatible:
+      - IE=Edge
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Referrer-Policy:
+      - no-referrer
+      Strict-Transport-Security:
+      - max-age=63072000; includeSubDomains
+      Content-Encoding:
+      - gzip
+      Vary:
+      - Accept-Encoding
+    body:
+      encoding: ASCII-8BIT
+      string: '{"access_token":"<JWT_TOKEN>","token_type":"bearer","expires_in":3600}'
+  recorded_at: Sun, 10 Mar 2024 19:16:53 GMT
+- request:
+    method: get
+    uri: https://app.aikido.dev/api/public/v1/open-issue-groups?page=0
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      Accept:
+      - application/json
+      User-Agent:
+      - Aikido Ruby Client 0.0.1
+      Authorization:
+      - "<AUTHORIZATION_HEADER>"
+      Accept-Encoding:
+      - gzip, deflate
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 10 Mar 2024 19:16:54 GMT
+      Content-Type:
+      - application/json
+      Server:
+      - Apache
+      Content-Security-Policy:
+      - 'default-src ''self'' https://cdn.aikido.dev; script-src ''self'' https://widget.intercom.io
+        https://js.intercomcdn.com ''sha256-dAMs3/Yp2SSUrhzjwbwLmPPB0soj/thHemUrM4u00O8=''
+        https://cdn.aikido.dev https://js-eu1.hs-scripts.com https://js-eu1.hs-banner.com
+        https://js-eu1.hubspot.com https://js-eu1.hs-analytics.net ''sha256-1e5RR2OpHhuX2h0Bat19DsNTmqbo4M3T1pqfeTXCHaA='';
+        img-src ''self'' data: blob: https://site-admin-avatar-cdn.prod.public.atl-paas.net/avatars/
+        https://api.atlassian.com/ex/jira/ https://static.intercomassets.com https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/
+        https://public.linear.app/3e49ffe7-6d8a-4461-87e6-51db22880264/b56a87f8-51d0-4b41-804e-9df63b3cafe7
+        https://*.intercomcdn.com https://static.intercomassets.com https://js.intercomcdn.com
+        https://avatars.githubusercontent.com https://cdn.aikido.dev https://secure.gravatar.com
+        https://track-eu1.hubspot.com/; media-src https://media.securecodewarrior.com/
+        https://video-bundler.lambdatest.com/; style-src ''unsafe-inline'' ''self''
+        https://cdn.aikido.dev; font-src ''self'' https://*.intercomcdn.com https://cdn.aikido.dev;
+        frame-src ''self'' https://vaultjs.apideck.com https://www.aikido.dev/signup-succesful;
+        connect-src ''self'' https://o1405212.ingest.sentry.io/ https://*.intercom.io
+        wss://*.intercom.io https://uploads.intercomcdn.com https://sockjs-eu.pusher.com
+        wss://ws-eu.pusher.com https://cdn.aikido.dev https://journy.aikido.dev https://cta-eu1.hubspot.com
+        https://product.aikido.dev; prefetch-src ''self'' https://cdn.aikido.dev/;
+        object-src ''none''; frame-ancestors ''none''; form-action ''none''; base-uri
+        ''self'';'
+      X-Ua-Compatible:
+      - IE=Edge
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Referrer-Policy:
+      - no-referrer
+      Strict-Transport-Security:
+      - max-age=63072000; includeSubDomains
+      Content-Encoding:
+      - gzip
+      Vary:
+      - Accept-Encoding
+    body:
+      encoding: ASCII-8BIT
+      string: '[{"id":581703,"type":"leaked_secret","title":"Secret leaked in .travis.yml","description":"in
+        .travis.yml","severity_score":60,"severity":"medium","group_status":"new","time_to_fix_minutes":60,"locations":[{"id":336780,"name":"ruby-jwt","type":"code_repository"}]},{"id":581700,"type":"leaked_secret","title":"Secret
+        leaked in spec\/integration\/readme_examples_spec.rb","description":"in readme_examples_spec.rb","severity_score":27,"severity":"low","group_status":"new","time_to_fix_minutes":60,"locations":[{"id":336780,"name":"ruby-jwt","type":"code_repository"}]},{"id":581699,"type":"leaked_secret","title":"Secret
+        leaked in README.md","description":"in README.md","severity_score":27,"severity":"low","group_status":"new","time_to_fix_minutes":60,"locations":[{"id":336780,"name":"ruby-jwt","type":"code_repository"}]},{"id":581702,"type":"leaked_secret","title":"Secret
+        leaked in spec\/fixtures\/certs\/ec512-private.pem","description":"in rsa-4096-private.pem
+        and rsa-2048-wrong-private.pem and 4 others","severity_score":20,"severity":"low","group_status":"new","time_to_fix_minutes":60,"locations":[{"id":336780,"name":"ruby-jwt","type":"code_repository"}]},{"id":581701,"type":"leaked_secret","title":"Secret
+        leaked in spec\/fixtures\/certs\/ec384-private.pem","description":"in ec384-wrong-private.pem
+        and ec384-private.pem","severity_score":20,"severity":"low","group_status":"new","time_to_fix_minutes":60,"locations":[{"id":336780,"name":"ruby-jwt","type":"code_repository"}]},{"id":581698,"type":"leaked_secret","title":"Secret
+        leaked in spec\/fixtures\/certs\/ec256k-private.pem","description":"in ec256-wrong-private.pem
+        and ec256-private.pem and 1 others","severity_score":20,"severity":"low","group_status":"new","time_to_fix_minutes":60,"locations":[{"id":336780,"name":"ruby-jwt","type":"code_repository"}]},{"id":581697,"type":"leaked_secret","title":"Secret
+        leaked in spec\/fixtures\/certs\/ec256-private-v2.pem","description":"in ec256-private-v2.pem","severity_score":20,"severity":"low","group_status":"new","time_to_fix_minutes":60,"locations":[{"id":336780,"name":"ruby-jwt","type":"code_repository"}]},{"id":581696,"type":"leaked_secret","title":"Secret
+        leaked in spec\/jwt_spec.rb","description":"in jwt.rb and jwt_spec.rb","severity_score":20,"severity":"low","group_status":"new","time_to_fix_minutes":60,"locations":[{"id":336780,"name":"ruby-jwt","type":"code_repository"}]}]'
+  recorded_at: Sun, 10 Mar 2024 19:16:54 GMT
+recorded_with: VCR 6.2.0

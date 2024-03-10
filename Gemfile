@@ -8,3 +8,6 @@ gemspec
 gem 'rake'
 gem 'rspec'
 gem 'rubocop'
+gem 'simplecov'
+gem 'vcr'
+gem 'webmock'
