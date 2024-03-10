@@ -1,0 +1,153 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://app.aikido.dev/api/oauth/token
+    body:
+      encoding: UTF-8
+      string: '{"grant_type":"client_credentials"}'
+    headers:
+      Content-Type:
+      - application/json
+      Accept:
+      - application/json
+      User-Agent:
+      - Aikido Ruby Client 0.0.2
+      Authorization:
+      - "<AUTHORIZATION_HEADER>"
+      Accept-Encoding:
+      - gzip, deflate
+      Content-Length:
+      - '35'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 10 Mar 2024 19:45:08 GMT
+      Content-Type:
+      - application/json
+      Server:
+      - Apache
+      Content-Security-Policy:
+      - 'default-src ''self'' https://cdn.aikido.dev; script-src ''self'' https://widget.intercom.io
+        https://js.intercomcdn.com ''sha256-dAMs3/Yp2SSUrhzjwbwLmPPB0soj/thHemUrM4u00O8=''
+        https://cdn.aikido.dev https://js-eu1.hs-scripts.com https://js-eu1.hs-banner.com
+        https://js-eu1.hubspot.com https://js-eu1.hs-analytics.net ''sha256-1e5RR2OpHhuX2h0Bat19DsNTmqbo4M3T1pqfeTXCHaA='';
+        img-src ''self'' data: blob: https://site-admin-avatar-cdn.prod.public.atl-paas.net/avatars/
+        https://api.atlassian.com/ex/jira/ https://static.intercomassets.com https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/
+        https://public.linear.app/3e49ffe7-6d8a-4461-87e6-51db22880264/b56a87f8-51d0-4b41-804e-9df63b3cafe7
+        https://*.intercomcdn.com https://static.intercomassets.com https://js.intercomcdn.com
+        https://avatars.githubusercontent.com https://cdn.aikido.dev https://secure.gravatar.com
+        https://track-eu1.hubspot.com/; media-src https://media.securecodewarrior.com/
+        https://video-bundler.lambdatest.com/; style-src ''unsafe-inline'' ''self''
+        https://cdn.aikido.dev; font-src ''self'' https://*.intercomcdn.com https://cdn.aikido.dev;
+        frame-src ''self'' https://vaultjs.apideck.com https://www.aikido.dev/signup-succesful;
+        connect-src ''self'' https://o1405212.ingest.sentry.io/ https://*.intercom.io
+        wss://*.intercom.io https://uploads.intercomcdn.com https://sockjs-eu.pusher.com
+        wss://ws-eu.pusher.com https://cdn.aikido.dev https://journy.aikido.dev https://cta-eu1.hubspot.com
+        https://product.aikido.dev; prefetch-src ''self'' https://cdn.aikido.dev/;
+        object-src ''none''; frame-ancestors ''none''; form-action ''none''; base-uri
+        ''self'';'
+      X-Ua-Compatible:
+      - IE=Edge
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Referrer-Policy:
+      - no-referrer
+      Strict-Transport-Security:
+      - max-age=63072000; includeSubDomains
+      Content-Encoding:
+      - gzip
+      Vary:
+      - Accept-Encoding
+    body:
+      encoding: ASCII-8BIT
+      string: '{"access_token":"<JWT_TOKEN>","token_type":"bearer","expires_in":3600}'
+  recorded_at: Sun, 10 Mar 2024 19:45:08 GMT
+- request:
+    method: get
+    uri: https://app.aikido.dev/api/public/v1/issues/export?filter_status=ignored
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      Accept:
+      - application/json
+      User-Agent:
+      - Aikido Ruby Client 0.0.2
+      Authorization:
+      - "<AUTHORIZATION_HEADER>"
+      Accept-Encoding:
+      - gzip, deflate
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 10 Mar 2024 19:45:08 GMT
+      Content-Type:
+      - application/json
+      Server:
+      - Apache
+      Content-Security-Policy:
+      - 'default-src ''self'' https://cdn.aikido.dev; script-src ''self'' https://widget.intercom.io
+        https://js.intercomcdn.com ''sha256-dAMs3/Yp2SSUrhzjwbwLmPPB0soj/thHemUrM4u00O8=''
+        https://cdn.aikido.dev https://js-eu1.hs-scripts.com https://js-eu1.hs-banner.com
+        https://js-eu1.hubspot.com https://js-eu1.hs-analytics.net ''sha256-1e5RR2OpHhuX2h0Bat19DsNTmqbo4M3T1pqfeTXCHaA='';
+        img-src ''self'' data: blob: https://site-admin-avatar-cdn.prod.public.atl-paas.net/avatars/
+        https://api.atlassian.com/ex/jira/ https://static.intercomassets.com https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/
+        https://public.linear.app/3e49ffe7-6d8a-4461-87e6-51db22880264/b56a87f8-51d0-4b41-804e-9df63b3cafe7
+        https://*.intercomcdn.com https://static.intercomassets.com https://js.intercomcdn.com
+        https://avatars.githubusercontent.com https://cdn.aikido.dev https://secure.gravatar.com
+        https://track-eu1.hubspot.com/; media-src https://media.securecodewarrior.com/
+        https://video-bundler.lambdatest.com/; style-src ''unsafe-inline'' ''self''
+        https://cdn.aikido.dev; font-src ''self'' https://*.intercomcdn.com https://cdn.aikido.dev;
+        frame-src ''self'' https://vaultjs.apideck.com https://www.aikido.dev/signup-succesful;
+        connect-src ''self'' https://o1405212.ingest.sentry.io/ https://*.intercom.io
+        wss://*.intercom.io https://uploads.intercomcdn.com https://sockjs-eu.pusher.com
+        wss://ws-eu.pusher.com https://cdn.aikido.dev https://journy.aikido.dev https://cta-eu1.hubspot.com
+        https://product.aikido.dev; prefetch-src ''self'' https://cdn.aikido.dev/;
+        object-src ''none''; frame-ancestors ''none''; form-action ''none''; base-uri
+        ''self'';'
+      X-Ua-Compatible:
+      - IE=Edge
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Referrer-Policy:
+      - no-referrer
+      Strict-Transport-Security:
+      - max-age=63072000; includeSubDomains
+      X-Filename:
+      - aikido_issues.json
+      Content-Disposition:
+      - attachment;filename="aikido_issues.json"
+      Expires:
+      - Mon, 26 Jul 1997 05:00:00 GMT
+      Cache-Control:
+      - cache, must-revalidate
+      Pragma:
+      - public
+      Content-Encoding:
+      - gzip
+      Vary:
+      - Accept-Encoding
+      Last-Modified:
+      - Sun, 10 Mar 2024 19:45:08 GMT
+    body:
+      encoding: ASCII-8BIT
+      string: "[]"
+  recorded_at: Sun, 10 Mar 2024 19:45:08 GMT
+recorded_with: VCR 6.2.0

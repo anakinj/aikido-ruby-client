@@ -12,14 +12,19 @@ module Aikido
       end
 
       def message
-        if @response.json['error_description']
-          "#{super} - #{@response.json['error_description']}"
+        json = @response.json
+        if json.key?('error_description')
+          "#{super} - #{json['error_description']}"
+        elsif json.key?('reason_phrase')
+          "#{super} - #{json['reason_phrase']}"
         else
           super
         end
       end
     end
+
+    BadRequestError   = Class.new(ApiError)
     UnauthorizedError = Class.new(ApiError)
-    NotFoundError = Class.new(ApiError)
+    NotFoundError     = Class.new(ApiError)
   end
 end

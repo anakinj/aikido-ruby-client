@@ -30,8 +30,15 @@ module Aikido
       end
     end
 
-    def issues(params: {})
-      get('/public/v1/issues/export', params: params).json
+    def connect_aws_cloud(role_arn:, name:, environment:)
+      handle_response!(authed_http.post('/public/v1/clouds/aws',
+                                        json: { role_arn: role_arn,
+                                                name: name,
+                                                environment: environment })).json
+    end
+
+    def issues(options = {})
+      get('/public/v1/issues/export', params: options).json
     end
 
     def issue(id)
@@ -55,7 +62,25 @@ module Aikido
     end
 
     def code_repository_sbom(id, format: 'csv')
-      get("repositories/code/#{id.to_i}/licenses/export", params: { format: format }).body
+      get("/public/v1/repositories/code/#{id.to_i}/licenses/export", params: { format: format }).read
+    end
+
+    def teams
+      PaginatedResponse.new do |page|
+        get('/public/v1/teams', params: { page: page }).json
+      end
+    end
+
+    def create_team(name:)
+      handle_response!(authed_http.post('/public/v1/teams', json: { name: name })).json
+    end
+
+    def update_team(id)
+      raise NotImplementedError
+    end
+
+    def containers
+      get('/public/v1/containers').json
     end
 
     private
@@ -92,6 +117,8 @@ module Aikido
 
     def raise_response_error!(response)
       case response.status
+      when 400
+        raise Errors::BadRequestError, response
       when 401
         raise Errors::UnauthorizedError, response
       else

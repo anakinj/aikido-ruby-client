@@ -5,5 +5,10 @@ require 'aikido-ruby-client'
 
 client = Aikido::Client.new
 
-puts client.issues
-puts client.code_repositories.to_a
+result = client.public_send(ARGV[0], *ARGV[1..-1])
+
+if result.is_a?(Aikido::PaginatedResponse)
+  puts result.to_a
+else
+  puts result
+end
