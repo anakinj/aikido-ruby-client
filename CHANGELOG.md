@@ -1,5 +1,11 @@
 # Changelog
 
+## [v0.0.3](https://github.com/anakinj/aikido-ruby-client/tree/v0.0.3) (2024-03-10)
+
+**Features:**
+
+- Support for even more endpoints
+
 ## [v0.0.2](https://github.com/anakinj/aikido-ruby-client/tree/v0.0.2) (2024-03-10)
 
 **Features:**
