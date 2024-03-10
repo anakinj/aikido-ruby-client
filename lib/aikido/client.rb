@@ -44,6 +44,7 @@ module Aikido
     end
 
     def auth_token
+      # TODO: Handle token expiration
       @auth_token ||= authorize.json['access_token']
     end
   end
