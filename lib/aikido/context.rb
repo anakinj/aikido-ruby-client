@@ -9,7 +9,7 @@ module Aikido
     end
 
     def issues_for_code_repository(external_repo_id:)
-      repo = code_repositories.find { |r| r['external_repo_id'] == external_repo_id }
+      repo = code_repositories.find { |r| r['external_repo_id'].to_s == external_repo_id.to_s }
       return [] unless repo
 
       issues.select do |issue|
